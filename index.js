@@ -140,17 +140,7 @@ function rectangularCollision({rectangle1, rectangle2}) {
     )
 }
 
-function determineWinner({player, enemy, timerId}) {
-    clearTimeout(timerId)
-    document.querySelector('#displayText').style.display = 'flex'
-    if(player.health === enemy.health) {
-        document.querySelector('#displayText').innerHTML = 'Gelijkspel'
-    } else if(player.health > enemy.health) {
-     document.querySelector('#displayText').innerHTML = 'Speler 1 heeft gewonnen'
-    }  else if(player.health < enemy.health) {
-     document.querySelector('#displayText').innerHTML = 'Speler 2 heeft gewonnen'
-    }
-}
+
 
 let timer = 60
 let timerId
@@ -197,36 +187,7 @@ function animate() {
         enemy.velocity.x = 5
     }
 }
-    //detect for collision
-    
-
-    if (
-        rectangularCollision({
-           rectangle1: player,
-           rectangle2: enemy 
-        }) &&
-        player.isAttacking
-        ) {
-            player.isAttacking = false
-        document.querySelector('#enemyHealth').style.width = enemy.health + '%'
-    }
-
-    if (
-        rectangularCollision({
-           rectangle1: enemy,
-           rectangle2: player 
-        }) &&
-        enemy.isAttacking
-        ) {
-            enemy.isAttacking = false
-            player.health -=20
-            document.querySelector('#playerHealth').style.width = player.health + '%'
-    }
-
-    //endgame based on health
-    if (enemy.health <= 0 || player.health <=0) {
-    determineWinner({player, enemy, timerId})
-    }
+   
     
 
 
