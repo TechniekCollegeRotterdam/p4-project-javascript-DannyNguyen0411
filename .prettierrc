@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "singleQuote": true,
      "semi": false,
      "trailingComma": "none",
@@ -12,17 +11,3 @@
        }
      ]
    }
-=======
-  "singleQuote": true,
-   "semi": false,
-   "trailingComma": "none",
-   "overrides": [
-     {
-       "files": "*.html",
-       "options": {
-         "parser": "html"
-       }
-     }
-   ]
- }
->>>>>>> 4ad4a23fcfd7f74f18447ba0c3d7d3dd5a4df78f
