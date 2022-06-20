@@ -6,8 +6,10 @@ canvas.height = 576
 
 c.fillRect(0, 0, canvas.width, canvas.height)
 
+/* Setting the gravity of the game. */
 const gravity = 0.7
 
+/* Creating a new sprite object for the background. */
 const background = new Sprite({
   position: {
     x: 0,
@@ -16,6 +18,7 @@ const background = new Sprite({
   imageSrc: './img/Treebackground.png' 
 })
 
+/* Creating a new sprite object for the shop */
 const shop = new Sprite({
   position: {
     x: 400,
@@ -27,6 +30,7 @@ const shop = new Sprite({
 })
 
 const player = new Fighter({
+/* Setting the position and velocity of the player. */
   position: {
     x: 0,
     y: 0
@@ -39,6 +43,7 @@ const player = new Fighter({
     x: 100,
     y: 0
   },
+/* Setting the image source, the number of frames, the scale, and the offset of the image. */
   imageSrc: './img/Martial Hero/Sprites/Idle.png',
   framesMax: 8,
   scale: 2.5,
@@ -80,6 +85,7 @@ const player = new Fighter({
       framesMax: 6
     }
   },
+ /* Creating a box that is used to detect if the player is attacking the enemy. */
   attackBox: {
     offset: {
       x: 100,
@@ -111,6 +117,7 @@ const enemy = new Fighter({
     x: 215,
     y: 167
   },
+/* Creating a new object called sprites. */
   sprites: {
     idle: {
       imageSrc: './img/Martial Hero 2/Sprites/Idle.png',
@@ -130,10 +137,6 @@ const enemy = new Fighter({
     },
     attack1: {
       imageSrc: './img/Martial Hero 2/Sprites/Attack1.png',
-      framesMax: 4
-    },
-    attack2: {
-      imageSrc: './img/Martial Hero 2/Sprites/Attack2.png',
       framesMax: 4
     },
     takeHit: {
@@ -157,6 +160,8 @@ const enemy = new Fighter({
 
 console.log(player)
 
+/* Creating a new object called keys. It is also creating a new object called a, d, ArrowRight, and
+ArrowLeft. It is also creating a new property called pressed and setting it to false. */
 const keys = {
   a: {
     pressed: false

@@ -10,6 +10,11 @@ function rectangularCollision({ rectangle1, rectangle2 }) {
     )
   }
   
+/**
+ * If the player's health is equal to the enemy's health, then display a tie. If the player's health is
+ * greater than the enemy's health, then display player 1 wins. If the player's health is less than the
+ * enemy's health, then display player 2 wins.
+ */
   function determineWinner({ player, enemy, timerId }) {
     clearTimeout(timerId)
     document.querySelector('#displayText').style.display = 'flex'
@@ -22,6 +27,7 @@ function rectangularCollision({ rectangle1, rectangle2 }) {
     }
   }
   
+/* This is a function that is decreasing the timer by 1 every second. */
   let timer = 60
   let timerId
   function decreaseTimer() {
@@ -31,6 +37,7 @@ function rectangularCollision({ rectangle1, rectangle2 }) {
       document.querySelector('#timer').innerHTML = timer
     }
   
+    /* Calling the determineWinner function. */
     if (timer === 0) {
       determineWinner({ player, enemy, timerId })
     }
