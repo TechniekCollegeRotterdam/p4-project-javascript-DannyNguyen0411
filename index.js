@@ -13,12 +13,12 @@ const background = new Sprite({
     x: 0,
     y: 0
   },
-  imageSrc: './img/background.png'
+  imageSrc: './img/Treebackground.png' 
 })
 
 const shop = new Sprite({
   position: {
-    x: 600,
+    x: 400,
     y: 128
   },
   imageSrc: './img/shop.png',
@@ -36,14 +36,14 @@ const player = new Fighter({
     y: 0
   },
   offset: {
-    x: 0,
+    x: 100,
     y: 0
   },
   imageSrc: './img/Martial Hero/Sprites/Idle.png',
   framesMax: 8,
   scale: 2.5,
   offset: {
-    x: 215,
+    x: 200,
     y: 157
   },
   sprites: {
@@ -64,7 +64,11 @@ const player = new Fighter({
       framesMax: 2
     },
     attack1: {
-      imageSrc: './img/Martial Hero/Sprites/Attack1.png',
+      imageSrc: './img/Martial Hero/Sprites/AmongUsAttack1.png',
+      framesMax: 6
+    },
+    attack2: {
+      imageSrc: './img/Martial Hero/Sprites/Attack2.png',
       framesMax: 6
     },
     takeHit: {
@@ -88,7 +92,7 @@ const player = new Fighter({
 
 const enemy = new Fighter({
   position: {
-    x: 400,
+    x: 900,
     y: 100
   },
   velocity: {
@@ -126,6 +130,10 @@ const enemy = new Fighter({
     },
     attack1: {
       imageSrc: './img/Martial Hero 2/Sprites/Attack1.png',
+      framesMax: 4
+    },
+    attack2: {
+      imageSrc: './img/Martial Hero 2/Sprites/Attack2.png',
       framesMax: 4
     },
     takeHit: {
@@ -229,6 +237,8 @@ function animate() {
     enemy.takeHit()
     player.isAttacking = false
 
+    /* A function that is part of the GSAP library. It is used to animate the width of the enemy's
+    health bar. */
     gsap.to('#enemyHealth', {
       width: enemy.health + '%'
     })
@@ -251,6 +261,8 @@ function animate() {
     player.takeHit()
     enemy.isAttacking = false
 
+   /* A function that is part of the GSAP library. It is used to animate the width of the enemy's
+   health bar. */
     gsap.to('#playerHealth', {
       width: player.health + '%'
     })
@@ -283,9 +295,9 @@ window.addEventListener('keydown', (event) => {
       case 'w':
         player.velocity.y = -20
         break
-      case ' ':
-        player.attack()
-        break
+        case ' ':
+          player.attack()
+          break
     }
   }
 
@@ -330,3 +342,36 @@ window.addEventListener('keyup', (event) => {
       break
   }
 })
+
+//This is for the pause screen
+var isPaused = false
+
+document.addEventListener('p', function(e){
+  if(e.which === 32)
+  {
+    if(isPaused) resumeGame();
+    else pauseGame();
+  }
+});
+
+function pauseGame()
+{
+ clearInterval(interval);
+ isPaused = true;
+ canvas.style.opacity = 0.5;
+ canvasContext.font = "90px tahoma";
+ canvasContext.fillStyle = "white";
+ canvasContext.textAlign = "center";
+ canvasContext.textBaseline = "middle";
+ canvasContext.filltext("Game Paused", 400, 250);
+
+}
+
+function resumeGame()
+{
+   isPaused = false;
+   canvasContext.clearRect(0, 0, canvas.width, canvas.height);
+   canvas.style.opacity = 1;
+   interval = setInterval(runGame, 20);
+}
+
