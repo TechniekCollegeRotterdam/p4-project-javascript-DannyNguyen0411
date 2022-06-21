@@ -10,8 +10,8 @@ c.fillRect(0, 0, canvas.width, canvas.height)
 const gravity = 0.7
 
 //background music
-let bg_SOUND=new Audio('music/still,move,forward.mp3');
-bg_SOUND.volume=0.2;
+let bg_SOUND=new Audio('music/japaneseSans-Theme.mp3');
+bg_SOUND.volume=0.5;
             
             
 bg_SOUND.play();
@@ -22,7 +22,7 @@ const background = new Sprite({
     x: 0,
     y: 0
   },
-  imageSrc: './img/Treebackground.png' 
+  imageSrc: './img/japanautumn.png' 
 })
 
 /* Creating a new sprite object for the shop */

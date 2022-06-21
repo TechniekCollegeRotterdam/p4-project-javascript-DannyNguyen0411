@@ -143,7 +143,7 @@ bg_SOUND.play();
     }
   
     takeHit() {
-      this.health -= 10
+      this.health -= 5
 
       //When someone gets hit
       let bg_SOUND=new Audio('music/robloxdeath.mp4');

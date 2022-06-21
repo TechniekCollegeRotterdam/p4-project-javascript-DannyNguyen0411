@@ -28,7 +28,7 @@ function rectangularCollision({ rectangle1, rectangle2 }) {
   }
   
 /* This is a function that is decreasing the timer by 1 every second. */
-  let timer = 60
+  let timer = 90
   let timerId
   function decreaseTimer() {
     if (timer > 0) {
