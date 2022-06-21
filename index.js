@@ -9,6 +9,13 @@ c.fillRect(0, 0, canvas.width, canvas.height)
 /* Setting the gravity of the game. */
 const gravity = 0.7
 
+//background music
+// let bg_SOUND=new Audio('music/still,move,forward.mp3');
+// bg_SOUND.volume=0.2;
+            
+            
+// bg_SOUND.play();
+
 /* Creating a new sprite object for the background. */
 const background = new Sprite({
   position: {
@@ -69,7 +76,7 @@ const player = new Fighter({
       framesMax: 2
     },
     attack1: {
-      imageSrc: './img/Martial Hero/Sprites/AmongUsAttack1.png',
+      imageSrc: './img/Martial Hero/Sprites/Attack1.png',
       framesMax: 6
     },
     attack2: {

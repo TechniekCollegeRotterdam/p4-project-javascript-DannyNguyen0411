@@ -133,10 +133,24 @@ class Sprite {
     attack() {
       this.switchSprite('attack1')
       this.isAttacking = true
+
+      //When someone is attacking
+      let bg_SOUND=new Audio('music/swordclash.mp3');
+bg_SOUND.volume=0.4;
+            
+            
+bg_SOUND.play();
     }
   
     takeHit() {
       this.health -= 10
+
+      //When someone gets hit
+      let bg_SOUND=new Audio('music/robloxdeath.mp4');
+      bg_SOUND.volume=0.9;
+                  
+                  
+      bg_SOUND.play();
   
       if (this.health <= 0) {
         this.switchSprite('death')
