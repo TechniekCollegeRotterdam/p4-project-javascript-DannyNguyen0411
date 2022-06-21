@@ -10,11 +10,11 @@ c.fillRect(0, 0, canvas.width, canvas.height)
 const gravity = 0.7
 
 //background music
-// let bg_SOUND=new Audio('music/still,move,forward.mp3');
-// bg_SOUND.volume=0.2;
+let bg_SOUND=new Audio('music/still,move,forward.mp3');
+bg_SOUND.volume=0.2;
             
             
-// bg_SOUND.play();
+bg_SOUND.play();
 
 /* Creating a new sprite object for the background. */
 const background = new Sprite({
