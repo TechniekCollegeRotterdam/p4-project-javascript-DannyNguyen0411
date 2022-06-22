@@ -10,11 +10,12 @@ c.fillRect(0, 0, canvas.width, canvas.height)
 const gravity = 0.7
 
 //background music
-let bg_SOUND=new Audio('music/japaneseSans-Theme.mp3');
-bg_SOUND.volume=0.5;
+/* Creating a new audio object and setting the volume to 0.5. It is also playing the audio. */
+// let bg_SOUND=new Audio('music/japaneseSans-Theme.mp3');
+// bg_SOUND.volume=0.5;
             
             
-bg_SOUND.play();
+// bg_SOUND.play();
 
 /* Creating a new sprite object for the background. */
 const background = new Sprite({
@@ -356,34 +357,14 @@ window.addEventListener('keyup', (event) => {
 })
 
 //This is for the pause screen
-var isPaused = false
+setTimeout(function(){ window.scrollTo(0, 0); }, 500);
 
-document.addEventListener('p', function(e){
-  if(e.which === 32)
-  {
-    if(isPaused) resumeGame();
-    else pauseGame();
-  }
-});
+document.addEventListener('mousemove', runGame);
 
-function pauseGame()
+function runGame(e)
 {
- clearInterval(interval);
- isPaused = true;
- canvas.style.opacity = 0.5;
- canvasContext.font = "90px tahoma";
- canvasContext.fillStyle = "white";
- canvasContext.textAlign = "center";
- canvasContext.textBaseline = "middle";
- canvasContext.filltext("Game Paused", 400, 250);
-
+  x = e.clientX;
+  y = e.clientY;
+  y = -y;
+  AudioWorkletNode.style.transform = "translateZ(600px) rotateX("+y+"deg) rotateY("+x+"deg)";
 }
-
-function resumeGame()
-{
-   isPaused = false;
-   canvasContext.clearRect(0, 0, canvas.width, canvas.height);
-   canvas.style.opacity = 1;
-   interval = setInterval(runGame, 20);
-}
-

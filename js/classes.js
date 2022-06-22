@@ -133,24 +133,12 @@ class Sprite {
     attack() {
       this.switchSprite('attack1')
       this.isAttacking = true
-
-      //When someone is attacking
-      let bg_SOUND=new Audio('music/swordclash.mp3');
-bg_SOUND.volume=0.4;
-            
-            
-bg_SOUND.play();
     }
   
     takeHit() {
       this.health -= 5
 
-      //When someone gets hit
-      let bg_SOUND=new Audio('music/robloxdeath.mp4');
-      bg_SOUND.volume=0.9;
-                  
-                  
-      bg_SOUND.play();
+
   
       if (this.health <= 0) {
         this.switchSprite('death')
@@ -194,7 +182,9 @@ bg_SOUND.play();
             this.framesCurrent = 0
           }
           break
+
         case 'jump':
+ /* Playing the sound when the player jumps. */
           if (this.image !== this.sprites.jump.image) {
             this.image = this.sprites.jump.image
             this.framesMax = this.sprites.jump.framesMax
@@ -211,26 +201,38 @@ bg_SOUND.play();
           break
   
         case 'attack1':
+                //When someone is attacking
+      let at_SOUND=new Audio('music/swordclash.mp3');
+      at_SOUND.volume=0.1;
           if (this.image !== this.sprites.attack1.image) {
             this.image = this.sprites.attack1.image
             this.framesMax = this.sprites.attack1.framesMax
-            this.framesCurrent = 0
+            this.framesCurrent = 0                                               
+            at_SOUND.play();
           }
           break
   
         case 'takeHit':
+     //When someone gets hit
+      let tk_SOUND=new Audio('music/robloxdeath.mp4');
+      tk_SOUND.volume=0.7;
+
           if (this.image !== this.sprites.takeHit.image) {
             this.image = this.sprites.takeHit.image
             this.framesMax = this.sprites.takeHit.framesMax
-            this.framesCurrent = -1
+            this.framesCurrent = -1                                             
+            tk_SOUND.play();
           }
           break
   
         case 'death':
+          let rip_SOUND=new Audio('music/amongus.mp3');
+          rip_SOUND.volume=0.1;
           if (this.image !== this.sprites.death.image) {
             this.image = this.sprites.death.image
             this.framesMax = this.sprites.death.framesMax
             this.framesCurrent = 0
+            rip_SOUND.play();
           }
           break
       }
