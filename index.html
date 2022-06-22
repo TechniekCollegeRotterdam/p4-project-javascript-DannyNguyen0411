@@ -20,10 +20,29 @@
       height: 100%;
       opacity: 0.6;
       background: black;
+      visibility: hidden;
     }
+
+    #resumeButton
+    {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font: 30px;
+      color: white;
+      text-align: center;
+      opacity: 0.5;
+  
+    }
+
+    #resumeButton { top: 30%; }
+
+    #resumeButton:hover { opacity: 1;}
   </style>
 </head>
 <body>
+  <div id="boxDiv">
   <!-- red container div -->
   <div style="position: relative; display: inline-block">
     <!-- smaller red container div -->
@@ -124,11 +143,10 @@
     </div>
     <canvas></canvas>
   </div>
+</div>
 
   <div id="pauseMenu"></div>
   <div id="resumeButton">Resume</div>
-  <div id="settingsButton">Settings</div>
-  <div id="creditsButton">Credits</div>
 
 
 

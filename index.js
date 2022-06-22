@@ -359,12 +359,53 @@ window.addEventListener('keyup', (event) => {
 //This is for the pause screen
 setTimeout(function(){ window.scrollTo(0, 0); }, 500);
 
+var world = document.getElementById("boxDiv");
+var pauseMenu = document.getElementById("pauseMenu");
+var resumeButton = document.getElementById("resumeButton");
+var x;
+var y;
+var isPaused = false;
+
 document.addEventListener('mousemove', runGame);
+document.addEventListener('keyup', function(e){ if(e.keyCode === 27) (isPaused) ? resumeGame() : pauseGame(); });
+resumeButton.addEventListener('click', resumeGame);
+
+function pauseGame()
+{
+  isPaused = true;
+  document.body.style.cursor = "crosshair";
+  pauseMenu.style.visibility = "visible";
+  hidePauseMenu();
+}
+
+function resumeGame()
+{
+  isPaused = false;
+  document.body.style.cursor = "none";
+  pauseMenu.style.visibility = "hidden";
+  hidePauseMenu();
+}
+
+function showPauseMenu()
+{
+  resumeButton.style.visibility = "visible";
+  settingButton.style.visibility = "visible";
+  creditsButton.style.visibility = "visible";
+}
+
+function hidePauseMenu()
+{
+  resumeButton.style.visibility = "hidden";
+  settingButton.style.visibility = "hidden";
+  creditsButton.style.visibility = "hidden";
+}
 
 function runGame(e)
 {
+  if(!isPaused)
+  {
   x = e.clientX;
   y = e.clientY;
   y = -y;
-  AudioWorkletNode.style.transform = "translateZ(600px) rotateX("+y+"deg) rotateY("+x+"deg)";
+ }
 }
