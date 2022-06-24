@@ -12,7 +12,7 @@ const gravity = 0.7
 //background music
 /* Creating a new audio object and setting the volume to 0.5. It is also playing the audio. */
 let bg_SOUND=new Audio('music/bigchungus.mp3');
-bg_SOUND.volume=0.5;
+bg_SOUND.volume=0.3;
                        
 bg_SOUND.play();
 

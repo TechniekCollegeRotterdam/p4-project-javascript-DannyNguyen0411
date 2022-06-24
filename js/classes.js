@@ -204,7 +204,7 @@ class Sprite {
         case 'attack1':
                 //When someone is attacking
       let at_SOUND=new Audio('music/swordclash.mp3');
-      at_SOUND.volume=0.1;
+      at_SOUND.volume=0.5;
           if (this.image !== this.sprites.attack1.image) {
             this.image = this.sprites.attack1.image
             this.framesMax = this.sprites.attack1.framesMax
@@ -216,7 +216,7 @@ class Sprite {
         case 'takeHit':
      //When someone gets hit
       let tk_SOUND=new Audio('music/robloxdeath.mp4');
-      tk_SOUND.volume=0.7;
+      tk_SOUND.volume=0.9;
 
           if (this.image !== this.sprites.takeHit.image) {
             this.image = this.sprites.takeHit.image
@@ -228,7 +228,7 @@ class Sprite {
   
         case 'death':
           let rip_SOUND=new Audio('music/amongus.mp3');
-          rip_SOUND.volume=0.1;
+          rip_SOUND.volume=0.9;
           if (this.image !== this.sprites.death.image) {
             this.image = this.sprites.death.image
             this.framesMax = this.sprites.death.framesMax

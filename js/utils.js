@@ -89,20 +89,11 @@ function hidePauseMenu()
 {
   resumeButton.style.visibility = "hidden";
   player.position.x = player.position.y  - 300;
-  enemy.position.x = enemy.position.y + 600;
+  enemy.position.x = enemy.position.y + 550;
 }
 
 
 /* Making the player and enemy move. */
 function runGame(e)
-{
-
-//   if(!isPaused){
-//   x = e.clientX;
-//   y = e.clientY;
-//   y = y;
-// world.style.transform = "translateZ(600px) rotateX("+y+"deg) rotateY("+x+"deg)";
-//   }
-  
- }
+{}
 
