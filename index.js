@@ -6,13 +6,14 @@ canvas.height = 576
 
 c.fillRect(0, 0, canvas.width, canvas.height)
 
+
 /* Setting the gravity of the game. */
 const gravity = 0.7
 
 //background music
-/* Creating a new audio object and setting the volume to 0.5. It is also playing the audio. */
-let bg_SOUND=new Audio('music/bigchungus.mp3');
-bg_SOUND.volume=0.3;
+/* Creating a new audio object and setting the volume to 0.9. It is also playing the audio. */
+let bg_SOUND=new Audio('music/asian.mp3');
+bg_SOUND.volume=0.7;
                        
 bg_SOUND.play();
 
@@ -357,4 +358,6 @@ window.addEventListener('keyup', (event) => {
       break
   }
 })
+
+
 

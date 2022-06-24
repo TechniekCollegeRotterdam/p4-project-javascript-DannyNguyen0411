@@ -23,7 +23,7 @@
       visibility: hidden;
     }
 
-    #resumeButton, #refreshButton
+    #resumeButton, #refreshButton, #playsound
     {
       position: fixed;
       cursor: pointer;
@@ -52,11 +52,12 @@
     }
     
 
-    #resumeButton { top: 30%; left: 35%;}
-    #refreshButton{ top: 50%; left: 35%;}
+    #resumeButton { top: 25%; left: 35%;}
+    #refreshButton{ top: 45%; left: 35%;}
+    #playsound{ top: 65%; left: 35%;}
     #amongus{ top: 10%; left: 15%;}
 
-    #resumeButton:hover, #refreshButton:hover, #amongus:hover { opacity: 1;}
+    #resumeButton:hover, #refreshButton:hover, #amongus:hover, #playsound:hover { opacity: 1;}
   </style>
 </head>
 <body>
@@ -86,12 +87,12 @@
           border-bottom: 4px solid white;
         "
       >
-        <div style="background-color: red; height: 30px; width: 100%"></div>
+        <div style="background-color: crimson; height: 30px; width: 100%"></div>
         <div
           id="playerHealth"
           style="
             position: absolute;
-            background: #818cf8;
+            background: MediumSeaGreen;
             top: 0;
             right: 0;
             bottom: 0;
@@ -128,12 +129,12 @@
           border-right: 4px solid white;
         "
       >
-        <div style="background-color: red; height: 30px"></div>
+        <div style="background-color: crimson; height: 30px"></div>
         <div
           id="enemyHealth"
           style="
             position: absolute;
-            background: #818cf8;
+            background: MediumSeaGreen;
             top: 0;
             right: 0;
             bottom: 0;
@@ -167,6 +168,7 @@
   <div id="resumeButton">Resume</div>
   <div id="refreshButton">Refresh</div>
   <div id="amongus">Play Sound</div>
+  <div id="playsound">Play Sound vr.02</div>
 
 
 

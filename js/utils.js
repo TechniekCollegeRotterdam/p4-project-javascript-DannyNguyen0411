@@ -54,6 +54,7 @@ let pauseMenu = document.querySelector("#pauseMenu");
 let resumeButton = document.querySelector("#resumeButton");
 let refreshButton = document.querySelector("#refreshButton");
 let amongus = document.querySelector("#amongus");
+let playsound = document.querySelector("#playsound");
 let x;
 let y;
 let isPaused = false;
@@ -64,6 +65,7 @@ document.addEventListener('keyup', function(e){ if(e.keyCode === 27) (isPaused) 
 resumeButton.addEventListener('click', resumeGame);
 refreshButton.addEventListener('click', reloadGame)
 amongus.addEventListener('click', playSound);
+playsound.addEventListener('click', playSound2);
 
 
 
@@ -75,6 +77,14 @@ function pauseGame()
   showPauseMenu();
 }
 
+/**
+ * It resumes the game by setting the isPaused variable to false, hiding the cursor, hiding the pause
+ * menu, and calling the hidePauseMenu function.
+ */
+/**
+ * It resumes the game by setting the isPaused variable to false, hiding the cursor, hiding the pause
+ * menu, and calling the hidePauseMenu function.
+ */
 function resumeGame()
 {
   isPaused = false;
@@ -83,6 +93,9 @@ function resumeGame()
   hidePauseMenu();
 }
 
+/**
+ * When the user clicks the button, the page will reload.
+ */
 function reloadGame(){
   window.location.reload();
 }
@@ -95,12 +108,21 @@ function playSound(){
   bg_SOUND.play();
 }
 
+/* Playing the sound. */
+function playSound2(){
+  let bg_SOUND=new Audio('music/swordclash.mp3');
+  bg_SOUND.volume=0.9;
+                         
+  bg_SOUND.play();
+}
+
 /* Making the resume button visible. */
 function showPauseMenu()
 {
   resumeButton.style.visibility = "visible";
   refreshButton.style.visibility = "visible";
   amongus.style.visibility = "visible";
+  playsound.style.visibility = "visible";
   player.position.x = player.position.y - 10000;
   enemy.position.x = enemy.position.y + 10000;
 }
@@ -110,6 +132,7 @@ function hidePauseMenu()
   resumeButton.style.visibility = "hidden";
   refreshButton.style.visibility = "hidden";
   amongus.style.visibility = "hidden";
+  playsound.style.visibility = "hidden";
   player.position.x = player.position.y  - 300;
   enemy.position.x = enemy.position.y + 550;
 }
