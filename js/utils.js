@@ -1,3 +1,4 @@
+/* A function that is checking if the player's attack box is colliding with the enemy's attack box. */
 function rectangularCollision({ rectangle1, rectangle2 }) {
     return (
       rectangle1.attackBox.position.x + rectangle1.attackBox.width >=
@@ -42,3 +43,66 @@ function rectangularCollision({ rectangle1, rectangle2 }) {
       determineWinner({ player, enemy, timerId })
     }
   }
+
+    //This is for the pause screen 3:14 start programming pause screen
+setTimeout(function(){ window.scrollTo(0, 0); }, 500);
+
+
+/* Creating a new variable called world and setting it to the element with the id of boxDiv. */
+let world = document.querySelector("#boxDiv");
+let pauseMenu = document.querySelector("#pauseMenu");
+let resumeButton = document.querySelector("#resumeButton");
+let x;
+let y;
+let isPaused = false;
+let isPlay = true;
+
+document.addEventListener('mousemove', runGame);
+document.addEventListener('keyup', function(e){ if(e.keyCode === 27) (isPaused) ? resumeGame() : pauseGame(); });
+resumeButton.addEventListener('click', resumeGame);
+
+function pauseGame()
+{
+  isPaused = true;
+  document.body.style.cursor = "context-menu";
+  pauseMenu.style.visibility = "visible";
+  showPauseMenu();
+}
+
+function resumeGame()
+{
+  isPaused = false;
+  document.body.style.cursor = "none";
+  pauseMenu.style.visibility = "hidden";
+  hidePauseMenu();
+}
+
+/* Making the resume button visible. */
+function showPauseMenu()
+{
+  resumeButton.style.visibility = "visible";
+  player.position.x = player.position.y - 10000;
+  enemy.position.x = enemy.position.y + 10000;
+}
+
+function hidePauseMenu()
+{
+  resumeButton.style.visibility = "hidden";
+  player.position.x = player.position.y  - 300;
+  enemy.position.x = enemy.position.y + 600;
+}
+
+
+/* Making the player and enemy move. */
+function runGame(e)
+{
+
+//   if(!isPaused){
+//   x = e.clientX;
+//   y = e.clientY;
+//   y = y;
+// world.style.transform = "translateZ(600px) rotateX("+y+"deg) rotateY("+x+"deg)";
+//   }
+  
+ }
+

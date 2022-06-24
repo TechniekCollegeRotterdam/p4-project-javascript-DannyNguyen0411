@@ -54,6 +54,7 @@ class Sprite {
     }
   }
   
+
  /* Extending the Sprite class. */
   class Fighter extends Sprite {
     constructor({
@@ -136,7 +137,7 @@ class Sprite {
     }
   
     takeHit() {
-      this.health -= 5
+      this.health -= 4
 
 
   
