@@ -138,11 +138,11 @@ const enemy = new Fighter({
       framesMax: 8
     },
     jump: {
-      imageSrc: './img/Martial Hero 2/Sprites/Jump.png',
+      imageSrc: './img/Martial Hero 2/Sprites/Jumpchungus.png',
       framesMax: 2
     },
     fall: {
-      imageSrc: './img/Martial Hero 2/Sprites/Fall.png',
+      imageSrc: './img/Martial Hero 2/Sprites/Fallchungus.png',
       framesMax: 2
     },
     attack1: {
