@@ -37,10 +37,26 @@
       visibility: hidden;
     }
 
-    #resumeButton, #refreshButton { top: 30%; left: 35%;}
-    #refreshButton{ top: 50%; left: 35%;}
+    #amongus
+    {
+      position: fixed;
+      cursor: pointer;
+      top: 1%;
+      left: -50%;
+      transform: translate(-50%, -50%);
+      font: 30px;
+      color: white;
+      text-align: right;
+      opacity: 0;
+      visibility: hidden;
+    }
+    
 
-    #resumeButton:hover, #refreshButton:hover { opacity: 1;}
+    #resumeButton { top: 30%; left: 35%;}
+    #refreshButton{ top: 50%; left: 35%;}
+    #amongus{ top: 10%; left: 15%;}
+
+    #resumeButton:hover, #refreshButton:hover, #amongus:hover { opacity: 1;}
   </style>
 </head>
 <body>
@@ -150,6 +166,7 @@
   <div id="pauseMenu"></div>
   <div id="resumeButton">Resume</div>
   <div id="refreshButton">Refresh</div>
+  <div id="amongus">Play Sound</div>
 
 
 
