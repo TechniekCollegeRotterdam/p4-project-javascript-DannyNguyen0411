@@ -52,6 +52,7 @@ setTimeout(function(){ window.scrollTo(0, 0); }, 500);
 let world = document.querySelector("#boxDiv");
 let pauseMenu = document.querySelector("#pauseMenu");
 let resumeButton = document.querySelector("#resumeButton");
+let refreshButton = document.querySelector("#refreshButton");
 let x;
 let y;
 let isPaused = false;
@@ -60,6 +61,9 @@ let isPlay = true;
 document.addEventListener('mousemove', runGame);
 document.addEventListener('keyup', function(e){ if(e.keyCode === 27) (isPaused) ? resumeGame() : pauseGame(); });
 resumeButton.addEventListener('click', resumeGame);
+refreshButton.addEventListener('click', reloadGame)
+
+
 
 function pauseGame()
 {
@@ -77,10 +81,15 @@ function resumeGame()
   hidePauseMenu();
 }
 
+function reloadGame(){
+  window.location.reload();
+}
+
 /* Making the resume button visible. */
 function showPauseMenu()
 {
   resumeButton.style.visibility = "visible";
+  refreshButton.style.visibility = "visible";
   player.position.x = player.position.y - 10000;
   enemy.position.x = enemy.position.y + 10000;
 }
@@ -88,6 +97,7 @@ function showPauseMenu()
 function hidePauseMenu()
 {
   resumeButton.style.visibility = "hidden";
+  refreshButton.style.visibility = "hidden";
   player.position.x = player.position.y  - 300;
   enemy.position.x = enemy.position.y + 550;
 }

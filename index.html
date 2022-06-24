@@ -23,7 +23,7 @@
       visibility: hidden;
     }
 
-    #resumeButton
+    #resumeButton, #refreshButton
     {
       position: fixed;
       cursor: pointer;
@@ -37,9 +37,10 @@
       visibility: hidden;
     }
 
-    #resumeButton { top: 30%; left: 35%; }
+    #resumeButton, #refreshButton { top: 30%; left: 35%;}
+    #refreshButton{ top: 50%; left: 35%;}
 
-    #resumeButton:hover { opacity: 1;}
+    #resumeButton:hover, #refreshButton:hover { opacity: 1;}
   </style>
 </head>
 <body>
@@ -148,6 +149,7 @@
 
   <div id="pauseMenu"></div>
   <div id="resumeButton">Resume</div>
+  <div id="refreshButton">Refresh</div>
 
 
 
