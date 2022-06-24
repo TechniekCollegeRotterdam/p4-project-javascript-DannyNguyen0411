@@ -102,7 +102,7 @@ function reloadGame(){
 
 /* Playing the sound. */
 function playSound(){
-  let bg_SOUND=new Audio('music/amongus.mp3');
+  let bg_SOUND=new Audio('music/bigchungus.mp3');
   bg_SOUND.volume=0.9;
                          
   bg_SOUND.play();
@@ -110,7 +110,7 @@ function playSound(){
 
 /* Playing the sound. */
 function playSound2(){
-window.location.href = "xedni.html";
+window.location.href = "index.html";
 }
 
 /* Making the resume button visible. */
