@@ -15,7 +15,7 @@ const gravity = 0.7
 /* Creating a new audio object and setting the volume to 0.9. It is also playing the audio. */
 
 
-let bg_SOUND=new Audio('music/still,move,forward.mp3');
+let bg_SOUND=new Audio('music/mintleaf.mp3');
 bg_SOUND.volume=0.7;
 
 bg_SOUND.play();
@@ -27,7 +27,7 @@ const background = new Sprite({
     x: 0,
     y: 0
   },
-  imageSrc: './img/the_nature.png' 
+  imageSrc: './img/kirbycliffstage.jpg' 
 })
 
 /* Creating a new sprite object for the shop */

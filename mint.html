@@ -12,9 +12,9 @@
       }
   
       canvas {
-      border-style: solid;
-    }
-
+        border-style: solid;
+      }
+  
       #pauseMenu
       {
         position: fixed;
@@ -27,7 +27,7 @@
         visibility: hidden;
       }
   
-      #resumeButton, #refreshButton, #playsound, #sus
+      #resumeButton, #refreshButton, #amongus, #sus
       {
         position: fixed;
         cursor: pointer;
@@ -41,26 +41,26 @@
         visibility: hidden;
       }
   
-      #amongus
+      #playsound
       {
         position: fixed;
         cursor: pointer;
         top: 1%;
         left: -50%;
         transform: translate(-50%, -50%);
-        font: 30px;
+        font-size: 30px;
         color: white;
         text-align: right;
-        opacity: 0;
+        opacity: 0.1;
         visibility: hidden;
       }
       
   
       #resumeButton { top: 15%; left: 35%;}
       #refreshButton{ top: 35%; left: 35%;}
-      #playsound{ top: 55%; left: 35%;}
+      #amongus{ top: 55%; left: 35%;}
       #sus {top: 75%; left: 35%;}
-      #amongus{ top: 10%; left: 15%;}
+      #playsound{ top: 75%; left: 35%;}
   
       #resumeButton:hover, #refreshButton:hover, #amongus:hover, #playsound:hover, #sus:hover { opacity: 1;}
     </style>
@@ -92,12 +92,12 @@
             border-bottom: 4px solid white;
           "
         >
-          <div style="background-color: MediumSeaGreen; height: 30px; width: 100%"></div>
+          <div style="background-color: mintcream; height: 30px; width: 100%"></div>
           <div
             id="playerHealth"
             style="
               position: absolute;
-              background: crimson;
+              background: MediumSeaGreen;
               top: 0;
               right: 0;
               bottom: 0;
@@ -134,12 +134,12 @@
             border-right: 4px solid white;
           "
         >
-          <div style="background-color: MediumSeaGreen; height: 30px"></div>
+          <div style="background-color: mintcream; height: 30px"></div>
           <div
             id="enemyHealth"
             style="
               position: absolute;
-              background: crimson;
+              background: MediumSeaGreen;
               top: 0;
               right: 0;
               bottom: 0;
@@ -172,11 +172,10 @@
     <div id="pauseMenu"></div>
     <div id="resumeButton">Resume</div>
     <div id="refreshButton">Refresh</div>
-    <div id="amongus">Play Sound</div>
-    <div id="playsound">Stages</div>
+    <div id="playsound">POYO</div>
+    <div id="amongus">Stages</div>
     <div id="sus">Quit</div>
     
-
   
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
@@ -184,8 +183,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="js/slitu.js"></script>
-    <script src="js/sessalc.js"></script>
+    <script src="js/utilsmint.js"></script>
+    <script src="js/classesmint.js"></script>
     <script src="js/mint.js"></script>
   </body>
   
