@@ -108,7 +108,9 @@ function playSound(){
   bg_SOUND.play();
 }
 
-/* Playing the sound. */
+/**
+ * When the user clicks on the button, the browser will go to the xedni.html page.
+ */
 function playSound2(){
 window.location.href = "index.html";
 }
