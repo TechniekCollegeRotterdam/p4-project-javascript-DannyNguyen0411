@@ -1,0 +1,85 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: 'Press Start 2P', cursive;
+      }
+  
+      canvas {
+        border-style: solid;
+      }
+  
+      #pauseMenu
+      {
+        position: fixed;
+        top: 0;
+        left: 0;
+        font: 30px;
+        width: 100%;
+        height: 100%;
+        background: url(img/japan_autumn.gif)
+      }
+
+
+  
+      #resumeButton, #refreshButton, #amongus
+      {
+        position: fixed;
+        cursor: pointer;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font: 30px;
+        color: whitesmoke;
+        text-align: center;
+        opacity: 0.5;
+      }
+  
+      #Swordlegends
+      {
+        position: fixed;
+        top: 1%;
+        left: -50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        color: crimson;
+        text-align: right;
+        opacity: 1;
+      }
+      
+
+      #resumeButton { top: 75%; left: 50%;}
+      #refreshButton{ top: 75%; left: 75%;}
+      #amongus{ top: 75%; left: 25%;}
+      #Swordlegends{ top: 35%; left: 50%;}
+  
+      #resumeButton:hover, #refreshButton:hover, #amongus:hover, #Swordlegends:hover { opacity: 1;}
+    </style>
+  </head>
+  <body>
+
+
+
+  
+    <div id="pauseMenu"></div>
+    <div id="resumeButton">Play stage 1</div>
+    <div id="refreshButton">Stages</div>
+    <div id="amongus">Play Sound</div>
+    <div id="Swordlegends">Sword Legends</div>
+    
+  
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="start.js"></script>
+
+  </body>
+  

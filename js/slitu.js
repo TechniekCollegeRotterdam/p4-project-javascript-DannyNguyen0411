@@ -55,6 +55,7 @@ let resumeButton = document.querySelector("#resumeButton");
 let refreshButton = document.querySelector("#refreshButton");
 let amongus = document.querySelector("#amongus");
 let playsound = document.querySelector("#playsound");
+let sus = document.querySelector('#sus')
 let x;
 let y;
 let isPaused = false;
@@ -66,7 +67,7 @@ resumeButton.addEventListener('click', resumeGame);
 refreshButton.addEventListener('click', reloadGame)
 amongus.addEventListener('click', playSound);
 playsound.addEventListener('click', playSound2);
-
+sus.addEventListener('click', quit);
 
 
 function pauseGame()
@@ -115,6 +116,11 @@ function playSound2(){
 window.location.href = "index.html";
 }
 
+function quit(){
+  window.location.href = "start.html";
+}
+
+
 /* Making the resume button visible. */
 function showPauseMenu()
 {
@@ -122,6 +128,7 @@ function showPauseMenu()
   refreshButton.style.visibility = "visible";
   amongus.style.visibility = "visible";
   playsound.style.visibility = "visible";
+  sus.style.visibility = "visible";
   player.position.x = player.position.y - 10000;
   enemy.position.x = enemy.position.y + 10000;
 }
@@ -132,6 +139,7 @@ function hidePauseMenu()
   refreshButton.style.visibility = "hidden";
   amongus.style.visibility = "hidden";
   playsound.style.visibility = "hidden";
+  sus.style.visibility = "hidden";
   player.position.x = player.position.y  - 300;
   enemy.position.x = enemy.position.y + 550;
 }

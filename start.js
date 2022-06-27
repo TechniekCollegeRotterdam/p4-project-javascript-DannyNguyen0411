@@ -1,3 +1,9 @@
+//startscreen background music
+let bg_SOUND=new Audio('music/still,move,forward.mp3');
+bg_SOUND.volume=0.7;
+
+bg_SOUND.play();
+
 /* A function that is checking if the player's attack box is colliding with the enemy's attack box. */
 function rectangularCollision({ rectangle1, rectangle2 }) {
     return (
@@ -54,7 +60,6 @@ let pauseMenu = document.querySelector("#pauseMenu");
 let resumeButton = document.querySelector("#resumeButton");
 let refreshButton = document.querySelector("#refreshButton");
 let amongus = document.querySelector("#amongus");
-let sus = document.querySelector("#sus");
 let playsound = document.querySelector("#playsound");
 let x;
 let y;
@@ -66,7 +71,6 @@ document.addEventListener('keyup', function(e){ if(e.keyCode === 27) (isPaused) 
 resumeButton.addEventListener('click', resumeGame);
 refreshButton.addEventListener('click', reloadGame)
 amongus.addEventListener('click', playSound);
-sus.addEventListener('click', quit);
 playsound.addEventListener('click', playSound2);
 
 
@@ -89,10 +93,7 @@ function pauseGame()
  */
 function resumeGame()
 {
-  isPaused = false;
-  document.body.style.cursor = "none";
-  pauseMenu.style.visibility = "hidden";
-  hidePauseMenu();
+    window.location.href = "index.html";
 }
 
 /**
@@ -110,10 +111,6 @@ function playSound(){
   bg_SOUND.play();
 }
 
-function quit(){
-  window.location.href = "start.html";
-}
-
 
 /**
  * When the user clicks on the button, the browser will go to the xedni.html page.
@@ -129,7 +126,6 @@ function showPauseMenu()
   refreshButton.style.visibility = "visible";
   amongus.style.visibility = "visible";
   playsound.style.visibility = "visible";
-  sus.style.visibility = "visible";
   player.position.x = player.position.y - 10000;
   enemy.position.x = enemy.position.y + 10000;
 }
@@ -140,7 +136,6 @@ function hidePauseMenu()
   refreshButton.style.visibility = "hidden";
   amongus.style.visibility = "hidden";
   playsound.style.visibility = "hidden";
-  sus.style.visibility = "hidden";
   player.position.x = player.position.y  - 300;
   enemy.position.x = enemy.position.y + 550;
 }
