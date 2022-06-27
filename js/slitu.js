@@ -113,7 +113,10 @@ function playSound(){
  * When the user clicks on the button, the browser will go to the xedni.html page.
  */
 function playSound2(){
-window.location.href = "index.html";
+  let bg_SOUND=new Audio('music/amongus.mp3');
+  bg_SOUND.volume=0.9;
+                         
+  bg_SOUND.play();
 }
 
 function quit(){
