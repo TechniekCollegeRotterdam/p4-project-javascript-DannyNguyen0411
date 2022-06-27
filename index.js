@@ -13,14 +13,13 @@ const gravity = 0.7
 
 //background music
 /* Creating a new audio object and setting the volume to 0.9. It is also playing the audio. */
-var aud = document.getElementById("myAudio"); 
 
-function playVid() {
+
 let bg_SOUND=new Audio('music/asian.mp3');
 bg_SOUND.volume=0.7;
-                       
+
 bg_SOUND.play();
-}
+
 
 /* Creating a new sprite object for the background. */
 const background = new Sprite({
