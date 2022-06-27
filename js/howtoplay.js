@@ -21,6 +21,7 @@ bg_SOUND.volume=0.7;
 bg_SOUND.play();
 
 
+
 let back = document.querySelector("#back");
 
 back.addEventListener('click', quit);

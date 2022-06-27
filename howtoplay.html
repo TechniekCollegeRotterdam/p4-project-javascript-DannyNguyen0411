@@ -10,7 +10,7 @@
         box-sizing: border-box;
         font-family: 'Press Start 2P', cursive;
       }
-  
+
       canvas {
         border-style: solid;
       }
@@ -23,16 +23,17 @@
       #pauseMenu
       {
         position: fixed;
-        top: 0;
-        left: 0;
+        top: 10%;
+        left: 20%;
         width: 100%;
         height: 100%;
-        opacity: 0.6;
-        background: black;
-        visibility: hidden;
+        background-image: url(img/controls.png);
+        background-size: 500px 500px;
+        background-repeat: no-repeat;
       }
   
-      #how, #refreshButton, #amongus, #back
+    
+      #player1, #player2, #back
       {
         position: fixed;
         cursor: pointer;
@@ -46,13 +47,12 @@
   
 
   
-      #how { top: 15%; left: 35%;}
-      #refreshButton{ top: 35%; left: 35%;}
-      #amongus{ top: 55%; left: 35%;}
-      #sus {top: 75%; left: 35%;}
+
+      #player1 { top: 15%; left: 30%;}
+      #player2 { top: 15%; left: 45%;}
       #back { top: 75%; left: 3.5%;}
   
-      #resumeButton:hover, #refreshButton:hover, #amongus:hover, #playsound:hover, #back:hover { opacity: 1;}
+  #back:hover { opacity: 1;}
     </style>
   </head>
   <body>
@@ -60,7 +60,9 @@
 
 
   
-<div><img id="how" src="img/comingsoon.png" alt="something" width="200" height="100"></div>
+    <div id="pausemenu"></div>
+    <div id="player1" style="color:DodgerBlue;">Player 1</div>
+    <div id="player2" style="color:red;">Player 2</div>
     <button id="back">Back</button>
   
     <script
