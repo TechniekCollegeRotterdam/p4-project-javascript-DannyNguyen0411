@@ -101,23 +101,23 @@ function level1()
  */
 function level2()
 {
-  window.location.href = "start.html";
+  window.location.href = "stage2.html";
 }
 
 /**
  * When the user clicks the button, the page will reload.
  */
 function level3(){
-  window.location.href = "start.html";
+  window.location.href = "stage3.html";
 }
 
 /* Playing the sound. */
 function level4(){
-  window.location.href = "start.html";
+  window.location.href = "stage4.html";
 }
 
 function level5(){
-  window.location.href = "start.html";
+  window.location.href = "stage5.html";
 }
 
 function quit(){

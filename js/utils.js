@@ -104,10 +104,7 @@ function reloadGame(){
 
 /* Playing the sound. */
 function playSound(){
-  let bg_SOUND=new Audio('music/amongus.mp3');
-  bg_SOUND.volume=0.9;
-                         
-  bg_SOUND.play();
+  window.location.href = "stages.html";
 }
 
 function quit(){

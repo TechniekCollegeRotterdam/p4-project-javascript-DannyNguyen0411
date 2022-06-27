@@ -8,7 +8,7 @@ canvas.height = 576
 c.fillRect(0, 0, canvas.width, canvas.height)
 
 //startscreen background music
-let bg_SOUND=new Audio('music/still,move,forward.mp3');
+let bg_SOUND=new Audio('music/kokushibo-theme.mp3');
 bg_SOUND.volume=0.7;
 
 bg_SOUND.play();
