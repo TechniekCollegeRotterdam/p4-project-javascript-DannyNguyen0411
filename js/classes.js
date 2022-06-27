@@ -1,3 +1,4 @@
+/* It creates a sprite object. */
 class Sprite {
     constructor({
       position,
@@ -36,6 +37,21 @@ class Sprite {
       )
     }
   
+/**
+ * "If the number of frames elapsed is divisible by the number of frames to hold, then increment the
+ * current frame by one, unless the current frame is the last frame, in which case set the current
+ * frame to the first frame."
+ * 
+ * The first thing we do is increment the number of frames elapsed by one. Then we check to see if the
+ * number of frames elapsed is divisible by the number of frames to hold. If it is, then we increment
+ * the current frame by one, unless the current frame is the last frame, in which case we set the
+ * current frame to the first frame.
+ * 
+ * The reason we check to see if the number of frames elapsed is divisible by the number of frames to
+ * hold is so that we can control the speed of the animation. If we set the number of frames to hold to
+ * one, then the animation will play as fast as possible. If we set the number of frames to hold to
+ * two,
+ */
     animateFrames() {
       this.framesElapsed++
   
