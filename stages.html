@@ -1,0 +1,83 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: 'Press Start 2P', cursive;
+      }
+  
+      canvas {
+        border-style: solid;
+      }
+
+      button{
+        padding: 10px;
+        margin: 10px;
+      }
+  
+      #pauseMenu
+      {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+        background-image: url(img/mountain.webp);
+        background-size: 1050px 600px;
+        background-repeat: no-repeat;
+      }
+  
+      #Stage1, #Stage2, #Stage3, #Stage4, #Stage5, #back
+      {
+        position: fixed;
+        cursor: pointer;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font: 30px;
+        color: black;
+        text-align: center;
+
+      }
+      
+  
+      #Stage1 { top: 10%; left: 5%;}
+      #Stage2{ top: 10%; left: 15%;}
+      #Stage3{ top: 10%; left: 25%;}
+      #Stage4 {top: 10%; left: 35%;}
+      #Stage5{ top: 10%; left: 45%;}    
+      #back { top: 75%; left: 3.5%;}
+  
+      #Stage1:hover, #Stage2:hover, #Stage3:hover, #Stage4:hover, #Stage5:hover, #back:hover { opacity: 1;}
+    </style>
+  </head>
+  <body>
+  
+    <canvas></canvas>
+
+    <div id="pauseMenu"></div>
+    
+    <button id="Stage1"><img src="img/japanautumn.png" width="100" height="75"><br>
+      Stage 1</button>
+    <button id="stage2">Stage 2</button>
+    <button id="stage3">Stage 3</button>
+    <button id="stage4">Stage 4</button>
+    <button id="stage5">Stage 5</button>
+    <button id="back">Back</button>
+
+  
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/stages.js"></script>
+  </body>
+  

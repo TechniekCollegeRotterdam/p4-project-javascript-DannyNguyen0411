@@ -1,5 +1,14 @@
+const canvas = document.querySelector('canvas')
+const c = canvas.getContext('2d')
+
+canvas.width = 1024
+canvas.height = 576
+
+/* Creating a rectangle that is the size of the canvas. */
+c.fillRect(0, 0, canvas.width, canvas.height)
+
 //startscreen background music
-let bg_SOUND=new Audio('music/still,move,forward.mp3');
+let bg_SOUND=new Audio('music/Great-Japanese-Empire.mp3');
 bg_SOUND.volume=0.7;
 
 bg_SOUND.play();
@@ -56,31 +65,30 @@ setTimeout(function(){ window.scrollTo(0, 0); }, 500);
 
 /* Creating a new variable called world and setting it to the element with the id of boxDiv. */
 let world = document.querySelector("#boxDiv");
-let pauseMenu = document.querySelector("#pauseMenu");
-let resumeButton = document.querySelector("#resumeButton");
-let refreshButton = document.querySelector("#refreshButton");
-let amongus = document.querySelector("#amongus");
-let playsound = document.querySelector("#playsound");
+let stage1 = document.querySelector("#stage1");
+let stage2 = document.querySelector("#stage2");
+let stage3 = document.querySelector("#stage3");
+let stage4 = document.querySelector("#stage4");
+let stage5 = document.querySelector("#stage5");
+let back = document.querySelector("#back");
 let x;
 let y;
 let isPaused = false;
 let isPlay = true;
 
 document.addEventListener('mousemove', runGame);
-document.addEventListener('keyup', function(e){ if(e.keyCode === 27) (isPaused) ? resumeGame() : pauseGame(); });
-resumeButton.addEventListener('click', resumeGame);
-refreshButton.addEventListener('click', reloadGame)
-amongus.addEventListener('click', playSound);
-playsound.addEventListener('click', playSound2);
+stage1.addEventListener('click', level1);
+stage2.addEventListener('click', level2)
+stage3.addEventListener('click', level3);
+stage4.addEventListener('click', level4);
+stage5.addEventListener('click', level5);
+back.addEventListener('click', quit);
 
 
 
-function pauseGame()
+function level1()
 {
-  isPaused = true;
-  document.body.style.cursor = "context-menu";
-  pauseMenu.style.visibility = "visible";
-  showPauseMenu();
+  window.location.href = "index.html";
 }
 
 /**
@@ -91,54 +99,31 @@ function pauseGame()
  * It resumes the game by setting the isPaused variable to false, hiding the cursor, hiding the pause
  * menu, and calling the hidePauseMenu function.
  */
-function resumeGame()
+function level2()
 {
-    window.location.href = "index.html";
+  window.location.href = "start.html";
 }
 
 /**
  * When the user clicks the button, the page will reload.
  */
-function reloadGame(){
-  window.location.reload();
+function level3(){
+  window.location.href = "start.html";
 }
 
 /* Playing the sound. */
-function playSound(){
-  let bg_SOUND=new Audio('music/amongus.mp3');
-  bg_SOUND.volume=0.9;
-                         
-  bg_SOUND.play();
+function level4(){
+  window.location.href = "start.html";
 }
 
-
-/**
- * When the user clicks on the button, the browser will go to the xedni.html page.
- */
-function playSound2(){
-window.location.href = "xedni.html";
+function level5(){
+  window.location.href = "start.html";
 }
 
-/* Making the resume button visible. */
-function showPauseMenu()
-{
-  resumeButton.style.visibility = "visible";
-  refreshButton.style.visibility = "visible";
-  amongus.style.visibility = "visible";
-  playsound.style.visibility = "visible";
-  player.position.x = player.position.y - 10000;
-  enemy.position.x = enemy.position.y + 10000;
+function quit(){
+  window.location.href = "start.html";
 }
 
-function hidePauseMenu()
-{
-  resumeButton.style.visibility = "hidden";
-  refreshButton.style.visibility = "hidden";
-  amongus.style.visibility = "hidden";
-  playsound.style.visibility = "hidden";
-  player.position.x = player.position.y  - 300;
-  enemy.position.x = enemy.position.y + 550;
-}
 
 
 /* Making the player and enemy move. */
