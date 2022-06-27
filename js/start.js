@@ -113,22 +113,10 @@ function reloadGame(){
 
 /* Playing the sound. */
 function playSound(){
-  let bg_SOUND=new Audio('music/amongus.mp3');
-  bg_SOUND.volume=0.9;
-                         
-  bg_SOUND.play();
+  window.location.href = "howtoplay.html";
 }
 
 
-/**
- * When the user clicks on the button, the browser will go to the xedni.html page.
- */
-function playSound2(){
-  let bg_SOUND=new Audio('music/amongus.mp3');
-  bg_SOUND.volume=0.9;
-                         
-  bg_SOUND.play();
-}
 
 
 
