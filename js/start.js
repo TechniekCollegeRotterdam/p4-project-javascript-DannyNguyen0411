@@ -69,7 +69,6 @@ let pauseMenu = document.querySelector("#pauseMenu");
 let resumeButton = document.querySelector("#resumeButton");
 let refreshButton = document.querySelector("#refreshButton");
 let amongus = document.querySelector("#amongus");
-let playsound = document.querySelector("#playsound");
 let x;
 let y;
 let isPaused = false;
@@ -79,7 +78,7 @@ document.addEventListener('mousemove', runGame);
 resumeButton.addEventListener('click', resumeGame);
 refreshButton.addEventListener('click', reloadGame)
 amongus.addEventListener('click', playSound);
-playsound.addEventListener('click', playSound2);
+
 
 
 

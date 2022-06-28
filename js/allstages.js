@@ -70,6 +70,7 @@ let stage2 = document.querySelector("#stage2");
 let stage3 = document.querySelector("#stage3");
 let stage4 = document.querySelector("#stage4");
 let stage5 = document.querySelector("#stage5");
+let stage6 = document.querySelector("#stage6");
 let back = document.querySelector("#back");
 let x;
 let y;
@@ -82,6 +83,7 @@ stage2.addEventListener('click', level2)
 stage3.addEventListener('click', level3);
 stage4.addEventListener('click', level4);
 stage5.addEventListener('click', level5);
+stage6.addEventListener('click', level6);
 back.addEventListener('click', quit);
 
 
@@ -118,6 +120,10 @@ function level4(){
 
 function level5(){
   window.location.href = "stage5.html";
+}
+
+function level6(){
+  window.location.href = "stage6.html";
 }
 
 function quit(){
