@@ -15,7 +15,7 @@ const gravity = 0.7
 /* Creating a new audio object and setting the volume to 0.9. It is also playing the audio. */
 
 
-let bg_SOUND=new Audio('music/RaceIntoTheNight.mp3');
+let bg_SOUND=new Audio('music/Glide.mp3');
 bg_SOUND.volume=0.7;
 
 bg_SOUND.play();
@@ -45,7 +45,7 @@ const shop = new Sprite({
 const player = new Fighter({
 /* Setting the position, velocity, and offset of the player. */
   position: {
-    x: 0,
+    x: 150,
     y: 0
   },
   velocity: {
@@ -111,7 +111,7 @@ const player = new Fighter({
 
 const enemy = new Fighter({
   position: {
-    x: 900,
+    x: 800,
     y: 100
   },
   velocity: {
